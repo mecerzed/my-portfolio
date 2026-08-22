@@ -39,3 +39,44 @@ h4 {
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
 }
+@keyframes string-length {
+  0%, 100% {
+    height: 90px;
+  }
+  40%, 55% {
+    height: 20px;
+  }
+}
+
+@keyframes ball-motion {
+  0%, 100% {
+    transform: scale(1.15, 0.8);
+  }
+  15%, 75% {
+    transform: scale(1, 1);
+  }
+  40%, 55% {
+    transform: scale(1, 1);
+  }
+}
+
+
+
+@keyframes ball-color {
+  0%, 100% {
+    background-color: #F97316;
+  }
+  40%, 55% {
+    background-color: #0F172A;
+  }
+}
+
+.animate-string {
+  animation: string-length 1.6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.animate-ball {
+  animation:
+    ball-motion 1.6s cubic-bezier(0.45, 0, 0.55, 1) infinite,
+    ball-color 1.6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
