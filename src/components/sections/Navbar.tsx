@@ -17,7 +17,7 @@ export default function Navbar() {
         <header className="sticky top-0 z-50 bg-bg/80 backdrop-blur-md border-b border-dark/10">
             <nav className="px-8 md:px-16 lg:px-24 py-5 flex items-center justify-between">
                 <Link href="/" className="font-semibold text-dark text-lg">
-                    Mecer
+                    Mecer / Design
                 </Link>
 
                 {/* Desktop links */}
