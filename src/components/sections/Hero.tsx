@@ -17,7 +17,7 @@ export default function Hero() {
   transition={{ duration: 0.5 }}
   className="text-accent font-medium tracking-wide uppercase text-sm mb-4"
 >
-  Product Designer & Brand Identity Designer
+  Product & Brand Identity Designer
 </motion.p>
 
 <motion.h1
@@ -37,7 +37,7 @@ export default function Hero() {
   transition={{ duration: 0.6, delay: 0.2 }}
   className="mt-6 max-w-xl text-lg text-text/70"
 >
-  I design digital products and visual identities and build the systems behind them.
+  I turn business ideas into clear brands, usable products, and scalable digital experiences.
 </motion.p>
 
 <motion.div

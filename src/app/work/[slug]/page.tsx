@@ -13,6 +13,7 @@ export default async function CaseStudyPage({
     params: Promise<{ slug: string }>;
 }) {
     const { slug } = await params;
+
     const project = projects.find((p) => p.slug === slug);
 
     if (!project) {
@@ -32,17 +33,25 @@ export default async function CaseStudyPage({
                 <p className="text-accent font-medium uppercase tracking-wide text-sm mb-4">
                     {project.category} · {project.year}
                 </p>
-                <h1 className="text-4xl md:text-6xl font-bold text-dark leading-tight">
+
+                <h1 className="text-4xl md:text-6xl font-bold text-dark leading-tight mb-6">
                     {project.title}
                 </h1>
+
+                <a
+                    href="#gallery"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-dark text-bg rounded-full font-medium hover:bg-accent transition-colors"
+                >
+                    View Gallery
+                </a>
             </div>
 
-            <div className="relative aspect-video bg-dark/5 rounded-2xl overflow-hidden mb-16">
+            <div className="relative aspect-video bg-dark/5 rounded-2xl overflow-hidden mb-16 flex items-center justify-center">
                 <Image
-                    src={project.image}
+                    src={project.images[0]}
                     alt={project.title}
                     fill
-                    className="object-cover"
+                    className="object-contain p-12"
                 />
             </div>
 
@@ -51,23 +60,41 @@ export default async function CaseStudyPage({
                     <p className="text-sm uppercase tracking-wide text-text/40 mb-2">
                         Role
                     </p>
-                    <p className="text-dark font-medium">{project.role}</p>
+
+                    <p className="text-dark font-medium">
+                        {project.role}
+                    </p>
                 </div>
 
                 <div className="md:col-span-2 space-y-8">
                     <div>
-                        <h2 className="text-xl font-semibold text-dark mb-3">Overview</h2>
-                        <p className="text-text/70 leading-relaxed">{project.overview}</p>
+                        <h2 className="text-xl font-semibold text-dark mb-3">
+                            Overview
+                        </h2>
+
+                        <p className="text-text/70 leading-relaxed">
+                            {project.overview}
+                        </p>
                     </div>
+
                     <div>
                         <h2 className="text-xl font-semibold text-dark mb-3">
                             The Challenge
                         </h2>
-                        <p className="text-text/70 leading-relaxed">{project.challenge}</p>
+
+                        <p className="text-text/70 leading-relaxed">
+                            {project.challenge}
+                        </p>
                     </div>
+
                     <div>
-                        <h2 className="text-xl font-semibold text-dark mb-3">Outcome</h2>
-                        <p className="text-text/70 leading-relaxed">{project.outcome}</p>
+                        <h2 className="text-xl font-semibold text-dark mb-3">
+                            Outcome
+                        </h2>
+
+                        <p className="text-text/70 leading-relaxed">
+                            {project.outcome}
+                        </p>
                     </div>
                 </div>
             </div>
