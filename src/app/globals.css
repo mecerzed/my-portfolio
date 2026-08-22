@@ -26,3 +26,16 @@ h3,
 h4 {
     font-family: var(--font-heading);
 }
+
+
+@theme {
+  --color-bg: #FAFAFA;
+  --color-text: #111111;
+  --color-secondary: #6B7280;
+  --color-accent: #F97316;
+  --color-dark: #0F172A;
+  --color-border: #E5E7EB;
+
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+}

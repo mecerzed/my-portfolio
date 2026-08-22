@@ -35,6 +35,19 @@ export default function Contact() {
                     >
                         WhatsApp
                     </a>
+
+
+<motion.a
+  href="https://www.behance.net/mecertinashe"
+  target="_blank"
+  rel="noopener noreferrer"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.97 }}
+  className="px-8 py-4 border border-dark/20 rounded-full font-medium hover:border-accent hover:text-accent transition-colors text-center"
+>
+  Behance
+</motion.a>
+
                 </div>
             </motion.div>
         </section>
