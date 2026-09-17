@@ -1,5 +1,6 @@
 import About from "@/components/sections/About";
 import Contact from "@/components/sections/Contact";
+import DesignQuote from "@/components/ui/DesignQuote";
 import FeaturedWork from "@/components/sections/FeaturedWork";
 import Footer from "@/components/sections/Footer";
 import Hero from "@/components/sections/Hero";
@@ -12,6 +13,9 @@ export default function Home() {
             <Hero />
             <FeaturedWork />
             <About />
+            <div className="py-20">
+                <DesignQuote />
+            </div>
             <Services />
             <Process />
             <Contact />

@@ -1,19 +1,6 @@
 import type { Metadata } from "next";
-import { League_Spartan, Inter } from "next/font/google";
 import Navbar from "@/components/sections/Navbar";
 import "./globals.css";
-
-const leagueSpartan = League_Spartan({
-    subsets: ["latin"],
-    variable: "--font-heading",
-    weight: ["400", "500", "600", "700"],
-});
-
-const inter = Inter({
-    subsets: ["latin"],
-    variable: "--font-body",
-    weight: ["400", "500", "600"],
-});
 
 export const metadata: Metadata = {
     title: "Melchizedek Tinashe Mecer — Product Designer & Developer",
@@ -25,7 +12,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en">
-            <body className={`${leagueSpartan.variable} ${inter.variable} antialiased`}>
+            <body className="antialiased">
                 <Navbar />
                 {children}
             </body>

@@ -38,12 +38,8 @@ export default async function CaseStudyPage({
                     {project.title}
                 </h1>
 
-                <a
-                    href="#gallery"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-dark text-bg rounded-full font-medium hover:bg-accent transition-colors"
-                >
-                    View Gallery
-                </a>
+                
+  <a href="#gallery" className="inline-flex items-center gap-2 px-6 py-3 bg-dark text-bg rounded-full font-medium hover:bg-accent transition-colors">View Gallery</a>
             </div>
 
             <div className="relative aspect-video bg-dark/5 rounded-2xl overflow-hidden mb-16 flex items-center justify-center">
@@ -98,6 +94,30 @@ export default async function CaseStudyPage({
                     </div>
                 </div>
             </div>
+
+            {project.images.length > 1 && (
+                <div id="gallery" className="mt-20 max-w-5xl">
+                    <h2 className="text-2xl font-semibold text-dark mb-8">
+                        Gallery
+                    </h2>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        {project.images.map((img, index) => (
+                            <div
+                                key={img}
+                                className="relative aspect-square bg-dark/5 rounded-2xl overflow-hidden"
+                            >
+                                <Image
+                                    src={img}
+                                    alt={`${project.title} — image ${index + 1}`}
+                                    fill
+                                    className="object-contain p-6"
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
         </main>
     );
 }
