@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const quotes = [
@@ -15,7 +15,15 @@ const quotes = [
 ];
 
 export default function DesignQuote() {
-  const [index] = useState(() => Math.floor(Math.random() * quotes.length));
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() => {
+      setIndex(Math.floor(Math.random() * quotes.length));
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
 
   return (
     <div className="max-w-2xl mx-auto text-center px-8">
