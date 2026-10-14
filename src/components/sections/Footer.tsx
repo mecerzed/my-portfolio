@@ -29,7 +29,7 @@ function LinkedInIcon({ className }: IconProps) {
 }
 
 function BehanceGlyph() {
-  return <span className="text-sm font-bold leading-none">Bē</span>;
+  return <span className="text-xs font-bold leading-none">Bē</span>;
 }
 
 const navLinks = [
@@ -44,12 +44,12 @@ const socials = [
   {
     label: "LinkedIn",
     href: "https://linkedin.com/in/melchizedek-mecer",
-    icon: <LinkedInIcon className="h-4 w-4" />,
+    icon: <LinkedInIcon className="h-3.5 w-3.5" />,
   },
   {
     label: "GitHub",
     href: "https://github.com/mecerzed",
-    icon: <GitHubIcon className="h-4 w-4" />,
+    icon: <GitHubIcon className="h-3.5 w-3.5" />,
   },
   {
     label: "Behance",
@@ -65,20 +65,22 @@ export default function Footer() {
 
   return (
     <footer className="bg-dark text-bg">
-      <div className="px-8 pb-10 pt-20 md:px-16 lg:px-24">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+      <div className="px-6 pb-5 pt-9 md:px-12 lg:px-20">
+        <div className="grid gap-7 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:gap-6 lg:gap-8">
           {/* Brand */}
           <div>
-            <Link href="/" className="text-2xl font-bold tracking-tight">
-              Mecer <span className="text-accent">/</span> Design
+            <Link href="/" className="text-xl font-bold tracking-tight">
+              Mecer The <span className="text-accent"> </span> Designer
             </Link>
-            <p className="mt-4 max-w-sm leading-relaxed text-bg/60">
-              Brand identity, product design and front-end developer, from
-              Harare to wherever the work is.
+
+            <p className="mt-2 max-w-xs text-sm leading-relaxed text-bg/60">
+              Brand identity, product design and front-end development,
+              from Harare to wherever the work is.
             </p>
+
             <a
               href={`mailto:${EMAIL}`}
-              className="group mt-6 inline-flex items-center gap-2 font-medium text-bg transition-colors hover:text-accent"
+              className="group mt-3 inline-flex items-center gap-2 text-sm font-medium text-bg transition-colors hover:text-accent"
             >
               {EMAIL}
               <span
@@ -92,15 +94,16 @@ export default function Footer() {
 
           {/* Navigate */}
           <div>
-            <h4 className="mb-5 text-xs font-medium uppercase tracking-widest text-bg/40">
+            <h4 className="mb-3 text-[11px] font-medium uppercase tracking-widest text-bg/40">
               Navigate
             </h4>
-            <ul className="space-y-3">
+
+            <ul className="space-y-2">
               {navLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-bg/70 transition-colors hover:text-accent"
+                    className="text-sm text-bg/70 transition-colors hover:text-accent"
                   >
                     {link.label}
                   </Link>
@@ -111,19 +114,21 @@ export default function Footer() {
 
           {/* Elsewhere */}
           <div>
-            <h4 className="mb-5 text-xs font-medium uppercase tracking-widest text-bg/40">
+            <h4 className="mb-3 text-[11px] font-medium uppercase tracking-widest text-bg/40">
               Elsewhere
             </h4>
-            <ul className="space-y-3">
+
+            <ul className="space-y-2">
               {socials.map((social) => (
                 <li key={social.label}>
                   <a
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-3 text-bg/70 transition-colors hover:text-accent"
+                    aria-label={social.label}
+                    className="group inline-flex items-center gap-2.5 text-sm text-bg/70 transition-colors hover:text-accent"
                   >
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full border border-bg/15 transition-colors group-hover:border-accent group-hover:bg-accent group-hover:text-dark">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full border border-bg/15 transition-colors group-hover:border-accent group-hover:bg-accent group-hover:text-dark">
                       {social.icon}
                     </span>
                     {social.label}
@@ -135,17 +140,21 @@ export default function Footer() {
 
           {/* Location */}
           <div>
-            <h4 className="mb-5 text-xs font-medium uppercase tracking-widest text-bg/40">
+            <h4 className="mb-3 text-[11px] font-medium uppercase tracking-widest text-bg/40">
               Based in
             </h4>
-            <p className="text-bg/70">Harare, Zimbabwe</p>
-            <p className="mt-1 text-sm text-bg/40">Working with clients worldwide</p>
+
+            <p className="text-sm text-bg/70">Harare, Zimbabwe</p>
+            <p className="mt-1 text-xs leading-relaxed text-bg/40">
+              Working with clients worldwide
+            </p>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-bg/10 pt-6 text-sm text-bg/40 sm:flex-row sm:items-center">
+        <div className="mt-8 flex flex-col items-start justify-between gap-3 border-t border-bg/10 pt-4 text-xs text-bg/40 sm:flex-row sm:items-center">
           <p>© {year} Melchizedek Tinashe Mecer. All rights reserved.</p>
+
           <a
             href="#"
             className="inline-flex items-center gap-2 transition-colors hover:text-accent"
