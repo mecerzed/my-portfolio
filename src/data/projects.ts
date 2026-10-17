@@ -53,8 +53,8 @@ export const projects: Project[] = [
       "A savanna-rooted brand identity built to feel authentic across menus, signage, and social media one bite is never enough.",
     description:
       "Brand identity for a new restaurant concept: logo, color system, and marketing flier design.",
-    images: ["/projects/mopane-grill.png",
-        "/projects/Mopane Logo New-01.png",
+    images: ["/projects/Mopane Logo New-01.png",
+      "/projects/mopane-grill.png",        
         "/projects/Mopane Logo New-02.png",
 
     ],

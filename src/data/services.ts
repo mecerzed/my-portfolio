@@ -58,83 +58,77 @@
 //             "Deploy, test, and refine post-launch based on how the product actually performs in the real world.",
 //     },
 // ];
+
 export type Service = {
-  number: string;
   title: string;
-  outcome: string;
   description: string;
-  deliverables: string[];
+  capabilities: string[];
 };
 
 export const services: Service[] = [
   {
-    number: "01",
     title: "Brand Identity",
-    outcome: "Build a visual identity people remember.",
     description:
-      "Logo design, colour, typography and brand guidelines, built so the brand looks consistent on a screen, a sign or a shirt.",
-    deliverables: ["Logo suite", "Colour & type", "Brand guidelines"],
+      "Logos, colour palettes, typography and brand guidelines that give a business an identity people remember and trust.",
+    capabilities: [
+      "Logo design",
+      "Colour & typography",
+      "Brand guidelines",
+      "Visual identity systems",
+    ],
   },
   {
-    number: "02",
-    title: "UI/UX & Product Design",
-    outcome: "Turn complicated ideas into products people can use.",
+    title: "Print Design",
     description:
-      "Research, user flows, wireframes and prototypes, taken from rough idea to a polished interface that's ready to build.",
-    deliverables: ["User flows", "Wireframes", "Prototypes", "UI design"],
+      "Business cards, fliers, posters, billboards and merchandise, prepared as production-ready files for real printing.",
+    capabilities: [
+      "Business cards",
+      "Posters & fliers",
+      "Billboards",
+      "Merchandise",
+    ],
   },
   {
-    number: "03",
-    title: "Print & Marketing Design",
-    outcome: "Take the brand from screen to the real world.",
+    title: "Marketing Materials",
     description:
-      "Business cards, fliers, posters, billboards and merchandise, prepared as production-ready files and tested against real printing.",
-    deliverables: ["Business cards", "Posters & fliers", "Billboards", "Merch"],
+      "Brochures, promotional pieces and campaign assets that communicate clearly and keep the brand consistent everywhere.",
+    capabilities: ["Brochures", "Promotional pieces", "Campaign assets"],
   },
   {
-    number: "04",
     title: "Digital Graphics",
-    outcome: "Keep every post and campaign looking like one brand.",
     description:
-      "Social media graphics and campaign visuals that apply the identity consistently and give audiences something worth stopping for.",
-    deliverables: ["Social graphics", "Campaign visuals", "Ad creatives"],
+      "Social media graphics and online visuals that apply your identity consistently and get noticed.",
+    capabilities: ["Social media graphics", "Ad creatives", "Web graphics"],
+  },
+  {
+    title: "UI/UX Design",
+    description:
+      "User flows, wireframes and polished interfaces for websites and apps, designed around real users and real goals.",
+    capabilities: [
+      "User flows",
+      "Wireframes",
+      "Prototypes",
+      "Interface design",
+    ],
+  },
+  {
+    title: "Product Design",
+    description:
+      "Taking an idea from research and prototype to a complete product design, ready to hand over and build.",
+    capabilities: [
+      "Research",
+      "Prototyping",
+      "Design systems",
+      "Developer handover",
+    ],
   },
 ];
 
-export type ProcessStep = {
-  number: string;
-  title: string;
-  description: string;
-  youGet: string;
-};
-
-export const steps: ProcessStep[] = [
-  {
-    number: "01",
-    title: "Discover",
-    description:
-      "I learn the brand, the audience and the constraints before I open a design tool.",
-    youGet: "A clear brief and direction.",
-  },
-  {
-    number: "02",
-    title: "Design",
-    description:
-      "I sketch and explore concepts, such as logo routes, wireframes and layouts, and share them early so you can react.",
-    youGet: "Concepts to give feedback on.",
-  },
-  {
-    number: "03",
-    title: "Refine",
-    description:
-      "I check the work against the brief and tighten typography, hierarchy and detail until it holds together.",
-    youGet: "Polished, consistent work.",
-  },
-  {
-    number: "04",
-    title: "Deliver",
-    description:
-      "I hand over production-ready files, brand guidelines and assets, print-ready or ready for a developer.",
-    youGet: "Files you can use straight away.",
-  },
+export const coreCapabilities = [
+  "Typography",
+  "Colour theory",
+  "Layout",
+  "Visual hierarchy",
+  "Research",
+  "Prototyping",
 ];
